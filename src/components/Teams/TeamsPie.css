@@ -1,0 +1,7 @@
+.TeamsBox{
+    height: 280px;
+    background-color:rgb(0, 0, 73);
+    border-radius:20px;
+    border: 1px solid rgb(0, 0, 255);
+    margin: 10px 0;
+}
