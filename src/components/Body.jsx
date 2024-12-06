@@ -2,6 +2,7 @@ import './Body.css'
 import Progress from './progress/Progress.jsx'
 import TeamsPie from './Teams/TeamsPie.jsx'
 import Contribution from '../graphs/Contribution.jsx'
+import WorkLog from '../graphs/WorkLog.jsx'
 
 
 const Body = () => {
@@ -9,9 +10,13 @@ const Body = () => {
     <div className='mainBody'>
         <div className="left">
           <div className="firstbox">
+            <h3>Test Case Count</h3>
           <Contribution/>
           </div>
-          
+          <div className="workLog">
+            <h3> Work Log ( in hrs ) </h3>
+            <WorkLog/>
+          </div>
         </div>
         <div className="center">
         <Progress/>
