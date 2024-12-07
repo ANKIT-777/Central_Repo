@@ -1,4 +1,4 @@
-import { RadialBarChart, RadialBar, Cell } from "recharts";
+import { RadialBarChart, RadialBar, Cell, Legend } from "recharts";
 
 const data = [
   { name: "Ankit", value: 89 },
@@ -16,12 +16,12 @@ const Contribution = () => {
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "300px" }}>
       <RadialBarChart
         width={400}
-        height={350} 
+        height={350}
         innerRadius="20%"
         outerRadius="100%"
         data={data}
-        startAngle={180} 
-        endAngle={0} 
+        startAngle={180}
+        endAngle={0}
       >
         <RadialBar
           dataKey="value"
@@ -32,6 +32,18 @@ const Contribution = () => {
             <Cell key={`cell-${index}`} fill={colors[index]} />
           ))}
         </RadialBar>
+        <Legend
+          wrapperStyle={{
+            position: "absolute",
+            display: "flex",
+            textAlign : "center",
+            top: "40px", 
+            width : "70%",
+            right: "10px", 
+            fontSize: "14px",
+          }}
+        />
+
       </RadialBarChart>
     </div>
   );

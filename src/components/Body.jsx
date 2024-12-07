@@ -3,6 +3,8 @@ import Progress from './progress/Progress.jsx'
 import TeamsPie from './Teams/TeamsPie.jsx'
 import Contribution from '../graphs/Contribution.jsx'
 import WorkLog from '../graphs/WorkLog.jsx'
+import Insights from './insights/Insights.jsx'
+import TestCasesCard from './lastexecution/LastExecution.jsx'
 
 
 const Body = () => {
@@ -20,10 +22,11 @@ const Body = () => {
         </div>
         <div className="center">
         <Progress/>
+        <Insights/>
         <TeamsPie/>
         </div>
         <div className="right">
-
+          <TestCasesCard/>
         </div>
     </div>
   )
