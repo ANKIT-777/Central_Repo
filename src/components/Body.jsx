@@ -5,6 +5,7 @@ import Contribution from '../graphs/Contribution.jsx'
 import WorkLog from '../graphs/WorkLog.jsx'
 import Insights from './insights/Insights.jsx'
 import TestCasesCard from './lastexecution/LastExecution.jsx'
+import Mvacard from './manualVsautomation/mvacard.jsx' 
 
 
 const Body = () => {
@@ -27,6 +28,7 @@ const Body = () => {
         </div>
         <div className="right">
           <TestCasesCard/>
+          <Mvacard/>
         </div>
     </div>
   )
