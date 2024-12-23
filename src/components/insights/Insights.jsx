@@ -2,7 +2,7 @@ import './Insights.css'
 
 const Insights = () => {
     return (
-        <div className='centerInsight'>
+        <div className='boxCard centerInsight'>
             <div className="cards">
                 <div className="header">
                     559

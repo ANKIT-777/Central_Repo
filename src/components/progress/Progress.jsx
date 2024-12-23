@@ -4,10 +4,10 @@ import '../../App.css'
 const Progress = () => {
   return (
     
-    <div className='automationProgress'>
+    <div className='boxCard automationProgress'>
       <div className="headers">
         <div className="heading">
-          Atuomation Progress
+          Automation Progress
         </div>
       </div>
       <AutomationProgressChart/>

@@ -5,24 +5,38 @@ import {
   Label,
   ResponsiveContainer,
 } from "recharts";
+import  { useEffect, useState } from "react";
+
 
 import '../index.css'
+import { fetchChartData } from "../api/chartCall.js";
+
 
 const TeamsCharts = () => {
-  const chartData = {
-    warningSteps: 0,
-    totalFeatures: 3,
-    failedFeatures: 1,
-    totalScenarios: 10,
-    passedScenarios: 7,
-    totalSteps: 96,
-    infoSteps: 0,
-    failedScenarios: 10,
-    passedFeatures: 1,
-    skippedSteps: 10,
-    passedSteps: 50,
-    failedSteps: 4,
-  };
+
+  const [chartData, setChartData] = useState(null); // Store the chart data
+  const [loading, setLoading] = useState(true); // Manage loading state
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const data = await fetchChartData();
+        setChartData(data.data); 
+      } catch (err) {
+        setError(err.message || "Failed to fetch data.");
+      } finally {
+        setLoading(false); // Stop loading
+      }
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+
+  if (error) return <div>Error: {error}</div>;
+
 
   const passStepsPercentage = (
     (chartData.passedSteps / chartData.totalSteps) *
@@ -45,20 +59,21 @@ const TeamsCharts = () => {
 
   const FeatureData = [
     { name: "Passed", value: chartData.passedFeatures },
-    { name: "Failed", value: chartData.totalFeatures },
+    { name: "Failed", value: chartData.failedFeatures },
   ];
 
   const ScenariosData = [
     { name: "Passed", value: chartData.passedScenarios },
-    { name: "Failed", value: chartData.totalScenarios },
+    { name: "Failed", value: chartData.failedScenarios },
   ];
 
-  const COLORS = ["#28a745", "#dc3545", "#ffc107"];
+  const COLORS = ["#45e600", "#dc3545", "#ffc107"];
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", padding: "20px" }}>
+    <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", padding: "20px",height:"100%" }}>
       {/* Feature Chart */}
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center" }}  className="Cards">
+      <h2> Total Features </h2>
         <ResponsiveContainer width={200} height={200}>
           <PieChart>
             <Pie
@@ -78,7 +93,7 @@ const TeamsCharts = () => {
                 value={`${passFeature}%`}
                 position="center"
                 fontSize="28px"
-                fill="rgb(124, 255, 146)"
+                fill="#000000"
                 style={{ fontWeight: "bold" }}
               />
             </Pie>
@@ -88,7 +103,8 @@ const TeamsCharts = () => {
       </div>
 
       {/* Scenarios Chart */}
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center" }} className="Cards">
+      <h2> Total Scenarios </h2>
         <ResponsiveContainer width={200} height={200}>
           <PieChart>
             <Pie
@@ -108,7 +124,7 @@ const TeamsCharts = () => {
                 value={`${passScenariosPercentage}%`}
                 position="center"
                 fontSize="28px"
-                fill="rgb(124, 255, 146)"
+                fill="#000000"
                 style={{ fontWeight: "bold" }}
               />
             </Pie>
@@ -118,7 +134,8 @@ const TeamsCharts = () => {
       </div>
 
       {/* Steps Chart */}
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center" }} className="Cards">
+        <h2> Total Steps </h2>
         <ResponsiveContainer width={200} height={200}>
           <PieChart>
             <Pie
@@ -138,7 +155,7 @@ const TeamsCharts = () => {
                 value={`${passStepsPercentage}%`}
                 position="center"
                 fontSize="28px"
-                fill="rgb(124, 255, 146)"
+                fill="#000000"
                 style={{ fontWeight: "bold" }}
               />
             </Pie>

@@ -13,7 +13,7 @@ const colors = ["#8884d8", "#82ca9d", "#ffc658", "#d88884", "#84d8ca", "#d8ca84"
 
 const Contribution = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "300px" }}>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "300px", marginTop:"10px" }}>
       <RadialBarChart
         width={400}
         height={350}

@@ -3,7 +3,7 @@ import './LastExecution.css'
 
 const LastExecution = () => {
   return (
-    <div className="testExecution">
+    <div className="boxCard testExecution">
       <h3> Test Case Exectued </h3>
       <div className="graph">
       <TestCasesCard/>

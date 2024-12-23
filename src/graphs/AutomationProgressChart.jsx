@@ -1,14 +1,14 @@
 import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts';
 
 const data = [
-  { month: 'Jan', TeamA: 10, TeamB: 70, TeamC: 60, TeamD: 0, TeamE: 0, TeamF: 0 },
+  { month: 'Jan', TeamA: 10, TeamB: 70, TeamC: 60, TeamD: 0, TeamE: 40, TeamF: 0 },
   { month: 'Feb', TeamA: 85, TeamB: 75, TeamC: 65, TeamD: 92, TeamE: 55, TeamF: 45 },
   { month: 'Mar', TeamA: 78, TeamB: 80, TeamC: 68, TeamD: 93, TeamE: 60, TeamF: 50 },
   { month: 'Apr', TeamA: 90, TeamB: 78, TeamC: 70, TeamD: 95, TeamE: 58, TeamF: 52 },
   { month: 'May', TeamA: 87, TeamB: 76, TeamC: 72, TeamD: 96, TeamE: 56, TeamF: 54 },
   { month: 'Jun', TeamA: 92, TeamB: 80, TeamC: 74, TeamD: 98, TeamE: 60, TeamF: 56 },
   { month: 'Jul', TeamA: 95, TeamB: 82, TeamC: 76, TeamD: 97, TeamE: 62, TeamF: 58 },
-  { month: 'Aug', TeamA: 93, TeamB: 85, TeamC: 78, TeamD: 96, TeamE: 64, TeamF: 60 },
+  { month: 'Aug', TeamA: 93, TeamB: 85, TeamC: 78, TeamD: 96, TeamE: 40, TeamF: 60 },
   { month: 'Sep', TeamA: 88, TeamB: 88, TeamC: 80, TeamD: 95, TeamE: 66, TeamF: 62 },
   { month: 'Oct', TeamA: 85, TeamB: 90, TeamC: 82, TeamD: 94, TeamE: 68, TeamF: 64 },
   { month: 'Nov', TeamA: 87, TeamB: 92, TeamC: 84, TeamD: 93, TeamE: 70, TeamF: 66 },

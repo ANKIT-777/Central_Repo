@@ -22,7 +22,7 @@ import {
   
     return (
       <div className="card">
-        <ResponsiveContainer width="100%" height={270}>
+        <ResponsiveContainer width="80%" height={320}>
           <BarChart layout="vertical" data={data}>
     
             <XAxis type="number" tickLine={false} axisLine={false} />

@@ -4,7 +4,7 @@ import TeamsCharts from '../../graphs/TeamsCharts'
 
 const TeamsPie = () => {
   return (
-    <div className='TeamsBox'>
+    <div className='boxCard TeamsBox'>
         <TeamsCharts/>
     </div>
   )

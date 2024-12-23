@@ -9,18 +9,22 @@ import Mvacard from './manualVsautomation/mvacard.jsx'
 import Dashboard from './date/Date.jsx'
 
 
+
 const Body = () => {
   return (
     <div className='mainBody'>
         <div className="left">
-          <div className="firstbox">
-            <h3>Test Case Count</h3>
+        <Dashboard/>
+          <div className="boxCard firstbox">
+            <p>Test Case Count</p>
           <Contribution/>
           </div>
-          <div className="workLog">
-            <h3> Work Log ( in hrs ) </h3>
+          <div className="boxCard workLog">
+            <p> Work Log ( in hrs ) </p>
             <WorkLog/>
+            
           </div>
+          
         </div>
         <div className="center">
           
@@ -28,9 +32,10 @@ const Body = () => {
         <Insights/>
         <TeamsPie/>
         
+        
         </div>
         <div className="right">
-          <Dashboard/>
+          
           <TestCasesCard/>
           <Mvacard/>
         </div>

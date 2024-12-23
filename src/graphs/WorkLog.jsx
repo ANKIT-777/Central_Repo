@@ -29,7 +29,7 @@ const WorkLogGraph = () => {
   ];
 
   return (
-    <ResponsiveContainer width="80%" height={200}>
+    <ResponsiveContainer width="90%" height={250} style={{paddingLeft:"20px"}}>
       <BarChart
         layout="vertical"
         data={data}

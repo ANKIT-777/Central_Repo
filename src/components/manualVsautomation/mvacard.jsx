@@ -3,11 +3,11 @@ import './mvacard.css'
 
 const Mvacard = () => {
   return (
-    <div className="mvaCard">
+    <div className="boxCard mvaCard">
         <h3>
-            Manual Vs Automation
+            Manual Vs Automation ( <p id="p"> Test Cases</p>  )
         </h3>
-        <p> Test Cases</p>
+        
         <div className="graph">
             <TestCasesGraph/>
         </div>

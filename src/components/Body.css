@@ -1,63 +1,72 @@
 .mainBody{
     width: 100%;
     height: 100vh;
-    margin-top: 70px;
-    background-color: rgb(0, 0, 33);
+    margin-top: 90px;
+    /* background-color: rgb(97, 97, 97);  */
     display: flex;
     flex-direction: row;
     padding: 10px;
     justify-content: space-around;
     padding-top: 20px;
+    position: relative;
 }
 .left{
     width: 24%;
     height: 100%;
-    background-color:rgb(0, 0, 28);
     margin: 1px solid rgb(0, 37, 29);
-    background-color: #000000;
 
 }
 
 .firstbox{
     width: 100%;
-    height: 220px;
-    background-color:rgb(0, 0, 73);
+    height: 250px;
     border-radius:20px;
-    border: 1px solid rgb(0, 0, 255);
     display: flex;
     flex-direction: column;
     color: #fff;
-    align-items: center;
     padding-top: 15px;
     justify-content: space-evenly;
+    margin-top: 10px;
+   
     
+}
+
+.firstbox>p,.workLog>p{
+    font-weight: bold;
+    font-size: 19px;
+    color: black;
+    margin: 10px 0px;
+    display: flex;
+    margin-left: 25px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: 70%;
+    
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 
 .workLog{
-    height: 35vh;
+    height: 33vh;
     display: flex;
     flex-direction: column;
     color: #fff;
-    align-items: center;
+    
     justify-content: space-around;
-    background-color:rgb(0, 0, 73);
     border-radius:20px;
     margin: 10px 0;
-    border: 1px solid #0000ff;
+
 }
+
 
 
 .center{
     width: 50%;
     height: 100%;
-    background-color:rgb(0, 0, 28);
     position: relative;
 }
 
 .right{
     width: 24%;
     height: 100%;
-    background-color:rgb(0, 0, 28);
-    margin: 1px solid rgb(0, 37, 29);
 }
